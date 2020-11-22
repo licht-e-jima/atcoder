@@ -4,6 +4,8 @@ from itertools import combinations
 from .graph import Graph
 
 class ERRG(Graph):
+    """Erdös-Rényi Random Graph
+    """
 
     def __init__(self, num_of_nodes: int, prob: float, print_edges: bool = False) -> None:
         edges = list(filter(

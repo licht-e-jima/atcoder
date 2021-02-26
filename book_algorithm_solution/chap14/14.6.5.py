@@ -136,8 +136,8 @@ def main():
 
         # 頂点 v を始点とした各辺を緩和
         for e in G[v]:
-            dist[e.to], reduction = chmin(dist[e.to], dist[v] + e.w)
-            if reduction:
+            dist[e.to], relaxation = chmin(dist[e.to], dist[v] + e.w)
+            if relaxation:
                 # 更新があるならヒープに新たに挿入
                 que.push((dist[e.to], e.to))
 

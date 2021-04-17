@@ -10,11 +10,6 @@ def present(tup: tuple) -> bool:
     if len(tup) < 2:
         return True
     elif len(tup) == 2:
-        # res_1 = subprocess.check_output(f"factor {tup[0]}")
-        # factor_1 = set(res_1[len(tup[0]):].split())
-        # res_2 = subprocess.check_output(f"factor {tup[1]}")
-        # factor_2 = set(res_2[len(tup[1]):].split())
-        # return len(factor_1 & factor_2) == 0
         return gcd(*tup) == 1
 
     for pair in combinations(tup, 2):

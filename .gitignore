@@ -112,3 +112,5 @@ venv.bak/
 .vscode/launch.json
 
 .DS_Store
+
+*.out
